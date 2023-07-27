@@ -53,7 +53,8 @@ class EECalculatorApp(App):
         self.root.ids.amplifiers_spinner.background_color = 'grey'
         self.root.ids.rlc_spinner.background_color = 'grey'
         self.root.ids.kirchhoff_ohm_watt_spinner.background_color = 'grey'
-        instance.background_color = "yellow"
+        instance.background_normal = ''  # Enable background colours to appear normal, not greyed
+        instance.background_color = "green"
 
 
 EECalculatorApp().run()
