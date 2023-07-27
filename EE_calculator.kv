@@ -1,0 +1,56 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        size_hint_y: 0.1
+        orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                id: amplifiers_label
+                text: "Amplifiers"
+            Spinner:
+                id: amplifiers_spinner
+                background_color: 'blue'
+                size_hint_y: 1
+                text: "Amplifiers"
+                values: app.amplifiers
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                id: rlc_label
+                text: "RLC"
+            Spinner:
+                id: rlc_spinner
+                size_hint_y: 1
+                text: "RLC"
+                values: app.rlc
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                id: led_label
+                text: "LED"
+            Spinner:
+                id: led_spinner
+                size_hint_y: 1
+                text: "LED I[sub]FD[/sub]"
+                values: app.led
+                on_text: app.set_selected_spinner_colour(self)
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                id: kirchhoff_ohm_watt_label
+                text: "Kirchhoff, Ohm, Watt"
+            Spinner:
+                id: kirchhoff_ohm_watt_spinner
+                size_hint_y: 1
+                text: "Kirchhoff, Ohm, Watt"
+                values: app.kirchhoff_ohm_watt
+
+
+
+    BoxLayout:
+        background_color: (1,0,0,1)
+        size_hint_y: 0.9
