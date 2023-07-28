@@ -10,10 +10,12 @@ BoxLayout:
                 text: "Amplifiers"
             Spinner:
                 id: amplifiers_spinner
-                background_color: 'blue'
+                background_normal: ''
+                background_color: 'grey'
                 size_hint_y: 1
                 text: "Amplifiers"
                 values: app.amplifiers
+                on_text: app.set_selected_spinner_colour(self)
 
         BoxLayout:
             orientation: 'vertical'
@@ -22,9 +24,12 @@ BoxLayout:
                 text: "RLC"
             Spinner:
                 id: rlc_spinner
+                background_normal: ''
+                background_color: 'grey'
                 size_hint_y: 1
                 text: "RLC"
                 values: app.rlc
+                on_text: app.set_selected_spinner_colour(self)
 
         BoxLayout:
             orientation: 'vertical'
@@ -33,6 +38,8 @@ BoxLayout:
                 text: "LED"
             Spinner:
                 id: led_spinner
+                background_normal: ''
+                background_color: 'grey'
                 size_hint_y: 1
                 text: "LED I[sub]FD[/sub]"
                 values: app.led
@@ -45,9 +52,12 @@ BoxLayout:
                 text: "Kirchhoff, Ohm, Watt"
             Spinner:
                 id: kirchhoff_ohm_watt_spinner
+                background_normal: ''
+                background_color: 'grey'
                 size_hint_y: 1
                 text: "Kirchhoff, Ohm, Watt"
                 values: app.kirchhoff_ohm_watt
+                on_text: app.set_selected_spinner_colour(self)
 
 
 
